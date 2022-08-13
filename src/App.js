@@ -4,14 +4,18 @@ import Header from './Components/Header';
 import Note from './Components/Note';
 import notes from '../src/Components/notes'
 
+ const  createNote = (noteItem) => {
+  return <Note 
+    title = {noteItem.title}
+    content  = {noteItem.content}
+  />
+}
+
 function App() {
   return (
     <div className="App">
       <Header />
-      <Note 
-          title="This is the title"
-          content="This is the note content"
-      />
+      {notes.map(createNote)}
       <Footer /> 
     </div>
   );
