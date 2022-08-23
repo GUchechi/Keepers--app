@@ -2,7 +2,7 @@ import './App.css';
 import CreateArea from './Components/CreateArea';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
-// import Note from './Components/Note';
+import Note from './Components/Note';
 // import notes from '../src/Components/notes'
 
 
@@ -19,6 +19,7 @@ function App() {
         />
       ))} */}
       <CreateArea />
+      <Note key={1} title="Note title" content="Note content" />
       <Footer /> 
     </div>
   );
