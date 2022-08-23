@@ -1,11 +1,14 @@
 import React from 'react'
 
-const Note = ({title, content}) => {
+const Note = ({onDelete, title,content}) => {
+  const handleClick = () => {
+    return onDelete();
+  };
   return (
     <div className='note'>
         <h1>{title}</h1>
         <p>{content}</p>
-        <button>DELETE</button>
+        <button onClick={handleClick}>DELETE</button>
     </div>
   )
 }
