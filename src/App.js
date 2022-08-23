@@ -8,6 +8,10 @@ import Note from './Components/Note';
 
 
 function App() {
+  const addNote = (note) => {
+    console.log(note);
+  }
+
   return (
     <div className="App">
       <Header />
@@ -18,7 +22,9 @@ function App() {
           content={noteItem.content}
         />
       ))} */}
-      <CreateArea />
+      <CreateArea
+        onAdd = {addNote}
+       />
       <Note key={1} title="Note title" content="Note content" />
       <Footer /> 
     </div>
